@@ -11,7 +11,22 @@
     tools:context="com.example.gus.tipcalculator.MainActivity">
 
     <TextView
+        android:text="Enter Bill Amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_marginTop="36dp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_marginTop="12dp"
+        android:id="@+id/editText"
+        android:selectAllOnFocus="false"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
