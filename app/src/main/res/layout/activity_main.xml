@@ -15,62 +15,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:id="@+id/textView2"
+        android:id="@+id/bill_prompt"
         android:layout_centerHorizontal="true" />
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="47dp">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <RadioButton
-                android:text="@string/ten_percent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton15"
-                android:checked="true" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <RadioButton
-                android:text="@string/twenty_percent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton16" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <RadioButton
-                android:text="@string/custom_percent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton17" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:id="@+id/editText6" />
-        </TableRow>
-    </TableLayout>
 
     <EditText
         android:layout_width="wrap_content"
@@ -78,10 +24,59 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:layout_marginTop="18dp"
-        android:id="@+id/editText"
+        android:id="@+id/bill_input"
         android:selectAllOnFocus="false"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/bill_prompt"
         android:layout_centerHorizontal="true"
         android:hint="0.00" />
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bill_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp" >
+
+        <RadioButton
+            android:text="@string/ten_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ten_percent_button"
+            android:layout_weight="1"
+            android:checked="true" />
+
+        <RadioButton
+            android:text="@string/twenty_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/twenty_percent_button"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/custom_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/custom_percent_button"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/custom_tip_input"
+            android:layout_weight="1"
+            android:enabled="false"/>
+    </RadioGroup>
+
+    <Button
+        android:text="@string/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radio"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:id="@+id/calculate_button" />
 
 </RelativeLayout>
