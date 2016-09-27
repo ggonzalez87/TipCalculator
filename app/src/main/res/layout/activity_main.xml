@@ -10,8 +10,100 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.gus.tipcalculator.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/bill_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:text="Enter Bill Amount" />
+
+            <EditText
+                android:id="@+id/bill_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bill_prompt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:ems="10"
+                android:hint="0.00"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="false" />
+
+            <RadioGroup
+                android:id="@+id/radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bill_input"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="38dp">
+
+                <RadioButton
+                    android:id="@+id/ten_percent_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="@string/ten_percent" />
+
+                <RadioButton
+                    android:id="@+id/twenty_percent_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/twenty_percent" />
+
+                <RadioButton
+                    android:id="@+id/custom_percent_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/custom_percent" />
+
+                <EditText
+                    android:id="@+id/custom_tip_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:inputType="numberDecimal" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/calculate_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:text="@string/calculate" />
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calculate_button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="29dp" />
+
+            <TextView
+                android:id="@+id/total_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/result"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
 </RelativeLayout>
