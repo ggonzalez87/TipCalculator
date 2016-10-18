@@ -141,18 +141,18 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         switch (checkedId) {
             case R.id.custom_percent_button:
                 tipCalc = Math.round(billInput * (customTipInput / 100.0) * 100.0) / 100.0;
-                tipResult = "Tip amount is <b>" + twoDForm.format(tipCalc) + "</b>";
-                total = "New total bill will be <b>" + twoDForm.format(tipCalc + billInput) + "</b>";
+                tipResult = "Tip amount is <b>$ " + twoDForm.format(tipCalc) + " USD</b>";
+                total = "New total bill will be <b>$ " + twoDForm.format(tipCalc + billInput) + " USD</b>";
                 break;
             case R.id.ten_percent_button:
                 tipCalc = Math.round((billInput * .10) * 100.0) / 100.0;
-                tipResult = "Tip amount is <b>" + twoDForm.format(tipCalc) + "</b>";
-                total = "New total bill will be <b>" + twoDForm.format(tipCalc + billInput) + "</b>";
+                tipResult = "Tip amount is <b>$ " + twoDForm.format(tipCalc) + " USD</b>";
+                total = "New total bill will be <b>$ " + twoDForm.format(tipCalc + billInput) + " USD</b>";
                 break;
             case R.id.twenty_percent_button:
                 tipCalc = Math.round((billInput * .20) * 100.0) / 100.0;
-                tipResult = "Tip amount is <b>" + twoDForm.format(tipCalc) + "</b>";
-                total = "New total bill will be <b>" + twoDForm.format(tipCalc + billInput) + "</b>";
+                tipResult = "Tip amount is <b>$ " + twoDForm.format(tipCalc) + " USD</b>";
+                total = "New total bill will be <b>$ " + twoDForm.format(tipCalc + billInput) + " USD</b>";
                 break;
         }
 
